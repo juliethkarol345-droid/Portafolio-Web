@@ -1,0 +1,670 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #FAF7FF;
+
+    color: #4B3859;
+}
+
+
+/* =========================
+   MENÚ DE NAVEGACIÓN
+========================= */
+
+header {
+    width: 100%;
+
+    padding: 25px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background-color: #FAF7FF;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 15px rgba(116, 81, 143, 0.15);
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #74518F;
+
+    letter-spacing: 2px;
+}
+
+
+/* MENÚ */
+
+nav ul {
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: #4B3859;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8064A2;
+}
+
+
+/* =========================
+   PORTADA / INICIO
+========================= */
+
+.inicio {
+    min-height: 100vh;
+
+    padding: 180px 8% 120px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: linear-gradient(
+        135deg,
+        #FAF7FF,
+        #EBDDF5,
+        #ceb0e7
+    );
+}
+
+
+/* CONTENIDO */
+
+.contenido-inicio {
+    max-width: 600px;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.contenido-inicio h1 {
+    font-size: 55px;
+
+    color: #74518F;
+
+    margin-bottom: 20px;
+}
+
+
+/* PRODUCCIÓN MULTIMEDIA */
+
+.contenido-inicio h2 {
+    font-size: 32px;
+
+    color: #8064A2;
+
+    margin-bottom: 25px;
+}
+
+
+/* TEXTO */
+
+.contenido-inicio p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton,
+.boton-proyecto {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background-color: #FFE89A;
+
+    color: #4B3859;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton:hover,
+.boton-proyecto:hover {
+    background-color: #8064A2;
+
+    color: white;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CÍRCULO DE LA PORTADA
+========================= */
+
+.imagen-inicio {
+    width: 420px;
+
+    height: 420px;
+
+    background-color: #FFF0B3;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    box-shadow: 12px 12px 0px #F2C14E;
+}
+
+.imagen-inicio img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+section {
+    padding: 140px 8%;
+}
+
+
+/* TÍTULOS */
+
+.titulo-seccion {
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #74518F;
+
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.sobre-mi {
+    min-height: 650px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #FAF7FF;
+}
+
+.sobre-mi p {
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   MIS TRABAJOS
+========================= */
+
+.trabajos {
+    min-height: 850px;
+
+    background-color: #F0E6F7;
+}
+
+.contenedor-trabajos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    background-color: #FFFFFF;
+
+    padding: 40px 30px;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 20px rgba(116, 81, 143, 0.12);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-12px);
+
+    box-shadow: 0 12px 25px rgba(116, 81, 143, 0.25);
+}
+
+.galeria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 60px;
+}
+.galeria img{
+    width: 500px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.galeria img:hover{
+    transform: scale(1.05);
+}
+
+.galeria-videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 70px;
+}
+
+.galeria-videos video{
+    width: 520px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.galeria-Redes Sociales{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-top: 70px;
+}
+
+.galeria-Redes Sociales{
+    width: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+.logo-proyecto{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.logo-proyecto img{
+    width: 500px;
+}
+
+/* ICONOS */
+
+.icono {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+
+/* TÍTULOS DE LAS TARJETAS */
+
+.tarjeta h3 {
+    color: #74518F;
+
+    margin-bottom: 18px;
+}
+
+
+/* TEXTO DE TARJETAS */
+
+.tarjeta p {
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   DETALLES DE PROYECTOS
+========================= */
+
+.detalle {
+    min-height: 750px;
+
+    padding: 160px 12%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #FAF7FF;
+}
+
+
+/* SECCIONES ALTERNAS */
+
+.detalle:nth-of-type(even) {
+    background-color: #F0E6F7;
+}
+
+
+/* TÍTULO DEL PROYECTO */
+
+.detalle h2 {
+    font-size: 40px;
+
+    color: #74518F;
+
+    margin-bottom: 40px;
+}
+
+
+/* TEXTO */
+
+.detalle p {
+    max-width: 900px;
+
+    margin: 20px auto;
+
+    font-size: 19px;
+
+    line-height: 2;
+}
+
+
+/* SUBTÍTULOS */
+
+.detalle h3 {
+    color: #8064A2;
+
+    margin-top: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+/* LISTA */
+
+.detalle ul {
+    list-style: none;
+
+    max-width: 550px;
+
+    margin: auto;
+}
+
+
+/* ELEMENTOS DE LA LISTA */
+
+.detalle ul li {
+    padding: 14px;
+
+    margin: 10px;
+
+    background-color: #FFF3B8;
+
+    border-radius: 25px;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.habilidades {
+    min-height: 750px;
+
+    background-color: #FAF7FF;
+}
+.contenedor-habilidades{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+
+/* TARJETAS DE HABILIDADES */
+
+.habilidad{
+    background: #FFF9D6;      /* Amarillo pastel */
+    border-left: 6px solid #8E6BBE;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: none;
+    text-align: left;
+}
+
+.habilidad h3{
+    color: #6D4BA6;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.habilidad p{
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+.habilidad:hover {
+    transform: translateY(-8px);
+
+    background-color: #FFE89A;
+}
+
+
+/* TÍTULO */
+
+.habilidad h3 {
+    color: #74518F;
+
+    margin-bottom: 15px;
+}
+
+
+/* TEXTO */
+
+.habilidad p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
+
+.contacto {
+    min-height: 550px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background-color: #74518F;
+}
+
+
+/* TÍTULO */
+
+.contacto .titulo-seccion {
+    color: #FFF0B3;
+}
+
+
+/* TEXTO */
+
+.contacto p {
+    font-size: 19px;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+
+/* BOTÓN DE CONTACTO */
+
+.contacto .boton {
+    background-color: #FFE89A;
+
+    color: #4B3859;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    padding: 35px;
+
+    text-align: center;
+
+    background-color: #4B3859;
+
+    color: white;
+}
+
+
+/* =========================
+   DISEÑO RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .inicio {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .contenedor-trabajos,
+    .contenedor-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+
+        font-size: 13px;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 40px;
+    }
+
+    .contenido-inicio h2 {
+        font-size: 25px;
+    }
+
+    .imagen-inicio {
+        width: 280px;
+
+        height: 280px;
+    }
+
+    .contenedor-trabajos,
+    .contenedor-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 100px 6%;
+    }
+}
